@@ -11,9 +11,17 @@ function App(){
     <SafeAreaView>
       <View>
         <Text>App</Text>
+        <Text>App</Text>
+        <Text>App</Text>
+        <Text>App</Text>
+        <Text>App</Text>
+        <Text>App</Text>
+        <Text>App</Text>
+        <Text>App</Text>
+        <Text>App</Text>
       </View>
     </SafeAreaView>
   )
 }
 
-export default App();
+export default App;
