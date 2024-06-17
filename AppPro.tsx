@@ -1,41 +1,26 @@
-import React, { isValidElement } from "react";
+import { SafeAreaView, ScrollView, StyleSheet} from 'react-native'
+import React from 'react'
+import FlatCards from './Components/FlatCards'
+import FancyCard from './Components/FancyCard'
+import CardScroll from './Components/CardScroll'
+import ActionCard from './Components/ActionCard'
 
-import {
-  View,
-  SafeAreaView,
-  Text,
-  StyleSheet,
-  useColorScheme
-} from 'react-native'
-
-function AppPro():JSX.Element{
-    const isDarkMode = useColorScheme() === 'dark'
+export default function AppPro() {
   return (
-  
-        <View style = {styles.container}>
-            <Text style= {isDarkMode ? styles.textmodedark:styles.textmodewhite}>Hello</Text>
-            <Text>app</Text>
-            <Text>app</Text>
-            <Text>app</Text>
-            <Text>app</Text>
-        </View>
+    <SafeAreaView style={styles.appback}>
+    <ScrollView>
+      <FlatCards />
+      <CardScroll/>
+      <FancyCard />
+      <ActionCard/>
+    </ScrollView>
+  </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-        alignItems:'center',
-        justifyContent: 'center'
-    },
-    textmodewhite:{
-        color:'#FFFFFF'
-    },
-    textmodedark:{
-        color:'#000000'
+    appback:{
+        backgroundColor:'#97f4f7',
+        padding:2
     }
-
-
 })
-
-export default AppPro;
